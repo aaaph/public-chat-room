@@ -6,6 +6,7 @@ config();
 
 const parsed = parse(process.env.DATABASE_URL);
 const isProd = (): boolean => process.env.NODE_ENV === "production";
+const ssl = process.env.DATABASE_SSL === "true";
 
 const options: ConnectionOptions = {
    type: "postgres",
@@ -16,6 +17,7 @@ const options: ConnectionOptions = {
    synchronize: true,
    logging: false,
    entities: [...(isProd() ? ["dist/model/**/*"] : ["src/model/**/*"])],
+   extra: { ssl },
 };
 
 const connect = async (): Promise<Connection> => {

@@ -1,0 +1,21 @@
+version: "3.1"
+services:
+   application:
+      container_name: chat-api
+      build: .
+      restart: always
+      environment:
+         PORT: 3000
+         NODE_ENV: production
+         DATABASE_URL: postgres://user:pass@database:5432/db
+      ports:
+         - "3000:3000"
+   database:
+      container_name: chat-database
+      image: postgres
+      ports:
+         - "3001:5432"
+      environment:
+         POSTGRES_USER: user
+         POSTGRES_PASSWORD: pass
+         POSTGRES_DB: db
