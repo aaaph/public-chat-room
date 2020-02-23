@@ -2,7 +2,7 @@ import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 import { IsDate, IsNotEmpty, Length, IsEmail } from "class-validator";
 
 @Entity()
-export class Message {
+export default class Message {
    // uuid identificator
    @PrimaryGeneratedColumn("uuid")
    id: string;

@@ -1,1 +1,1 @@
-export * from "./message.entity";
+export { default as Message } from "./message.entity";
