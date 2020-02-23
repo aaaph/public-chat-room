@@ -1,3 +1,3 @@
 export interface IidParam {
-   number?: string;
+   id?: string;
 }

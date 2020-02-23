@@ -4,7 +4,7 @@ import logger from "koa-logger";
 import cors from "@koa/cors";
 
 import { registerAlieses } from "./lib";
-registerAlieses(__dirname, ["lib", "database", "model", "service", "types", "middleware", "router"]);
+registerAlieses(__dirname, ["lib", "database", "model", "service", "ts", "middleware", "router"]);
 
 import { errorHandlerMiddleware } from "middleware";
 import { rootRouter } from "router";

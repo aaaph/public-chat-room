@@ -25,10 +25,10 @@ export class Message {
    // create date
    @IsDate()
    @Column("timestamptz")
-   created_at: Date;
+   createdAt: Date;
 
    // update date
    @IsDate()
    @Column("timestamptz")
-   updated_at: Date;
+   updatedAt: Date;
 }
