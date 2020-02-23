@@ -41,6 +41,7 @@ npm run .
 ### GET
 
 `/api/v1/message/list/:number` - return 10 messages of the `:number` page
+
 `/api/v1/message/single/:id` - return message by `:id`(uuid)
 
 ### PUT
@@ -53,4 +54,4 @@ npm run .
 
 ## Deployed
 
-application has been deployed at heroku - `https://public-chat-room-api.herokuapp.com`
+application has been deployed at [heroku](https://public-chat-room-api.herokuapp.com)
